@@ -9,41 +9,55 @@ body{
 }
 
 #container{
-    margin: 0 auto;
+    margin: 40px auto;
     width: 80%;
     color: #2F4156;
 }
 
 header, 
-nav {
-    width: 98%;
-    padding-left: 1%;
-    padding-right: 1%;
+nav,
+footer,
+main {
+    float: left;
 }
 
 header{
     height: 200px;
     background-color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 98%;
 }
 
-nav{
+nav.superior,
+nav.topo {
     background-color: #F5EFEB;
-    height: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-top: 1%;
-    margin-top: 1%;
-    color: #2F4156;
+    width: 100%;
+    margin-bottom: 1%;
+    font-weight: 300;
+}
+
+nav.topo {
+    background-color: #2F4156;
+}
+
+nav.lateral {
+    width: 29%;
+    background-color:#F5EFEB
 }
 
 main{
-    margin-top: 1%;
     background-color: #567C8D;
-    width: 92%;
+    width: 62%;
     padding-left: 4%;
     padding-right: 4%;
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: justify;
+    float: right;
+    border-radius: 20px;
+    border: 1px dashed #2F4156 ;
 }
 
 main p, main h3{
@@ -81,4 +95,102 @@ main{
 }
 footer h5{
     margin-bottom: 4%;
+}
+
+/* nav vertical inicio */
+nav.lateral ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.lateral li a{
+    display: block;
+    color: #2F4156;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+/* ao passar o mouse sobre */
+
+nav.lateral li a:hover {
+    background-color: gray;
+    color: #F5EFEB;
+} 
+
+nav.lateral .active {
+    background-color: steelblue;
+    color: white;
+}
+/* nav lateral/vertical fim */
+
+
+
+/* nav superior inicio */
+nav.superior ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav.superior li{
+    float: left;
+}
+
+nav.superior li a{ 
+    display: inline-block;
+    color: #2F4156;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav.superior li a:hover {
+    background-color: #2F4156;
+    color: #F5EFEB;
+}
+
+nav.superior .active{
+    background-color: steelblue;
+}
+
+nav.superior li:last-child{
+    border-right: none;
+}
+/* nav superior fim */
+
+
+/* nav topo inicio */
+nav.topo ul{
+    list-style-type: none;
+    background-color: #567C8D;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav.topo li {
+    display: inline-block;
+}
+
+nav.topo li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav.superior li a:hover {
+    background-color: #000;
+    color: #F5EFEB;
+}
+
+nav.superior .active{
+    background-color: steelblue;
 }
